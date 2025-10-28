@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+*.pdb
+*.egg-info/
+.eggs/
+
+# Build / dist
+build/
+dist/
+site/
+htmlcov/
+.coverage*
+.cache/
+
+# Tools
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Envs
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Alembic pycache
+alembic/versions/__pycache__/

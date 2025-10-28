@@ -1,0 +1,24 @@
+.git
+.gitignore
+.DS_Store
+.idea
+.vscode
+
+# Local envs and caches
+.venv
+.env
+.env.*
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build artifacts
+build
+dist
+site
+htmlcov
+.coverage*
+
+# Node leftovers (se aparecerem)
+node_modules

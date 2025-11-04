@@ -98,7 +98,7 @@ COPY --chown=${APP_USER}:${APP_USER} pyproject.toml /app/pyproject.toml
 # Runtime environment variables
 ENV PORT=8000 \
     APP_ENV=production \
-    PYTHONPATH=/app
+    PYTHONPATH=/app/src
 
 USER ${APP_USER}
 
@@ -110,4 +110,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=30s CMD python -c "import
     sys.exit(0) if urllib.request.urlopen('http://127.0.0.1:8000/health').getcode()==200 else sys.exit(1)" || exit 1
 
 # Default command runs the API with uvicorn
-CMD ["python", "-m", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]

@@ -27,7 +27,7 @@ services:
       db:
         condition: service_healthy
     command: >
-      sh -c "python -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload --proxy-headers"
+      sh -c "python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload --proxy-headers"
   db:
     container_name: music_curator_db
     image: postgres:16-alpine
